@@ -780,6 +780,7 @@ address {
   width: 100%;
   height: 100%;
   z-index: 999;
+  overflow-y: auto;
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
   pointer-events: none;
@@ -798,12 +799,12 @@ address {
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 4px;
-  width: 408px;
+  width: 288px;
   min-height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
-  padding: 72px 24px 24px 24px;
+  padding: 71px 12px 25px 20px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -866,6 +867,7 @@ address {
   color: #8e8f99;
   margin-bottom: 4px;
   display: block;
+  gap: 8px;
 }
 
 .form-group {
@@ -951,6 +953,9 @@ address {
 
 .check-icon {
 }
+.label-text {
+  display: inline;
+}
 .form-checkbox {
   width: 16px;
   height: 16px;
@@ -976,4 +981,13 @@ address {
   letter-spacing: 0.04em;
   color: #4D5AE5;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+  
 }
