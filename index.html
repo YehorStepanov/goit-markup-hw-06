@@ -30,9 +30,9 @@
     <header class="header">
       <div class="container">
         <nav class="header-nav">
-          <a class="logo" href="./index.html"
-            >Web<span class="logo-web">Studio</span></a
-          >
+          <a class="logo" href="./index.html">
+            Web<span class="logo-web">Studio</span>
+          </a>
           <ul class="nav-list">
             <li><a class="nav-link corrent" href="./index.html">Studio</a></li>
             <li><a class="nav-link" href="">Portfolio</a></li>
@@ -41,18 +41,26 @@
         </nav>
         <address class="header-address">
           <ul class="address-list">
-            <li>
-              <a class="address-email nav-link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
+            <li class="address-list-item">
+              <a
+                class="address-email nav-link"
+                href="mailto:info@devstudio.com"
               >
+                info@devstudio.com
+              </a>
             </li>
-            <li>
-              <a class="address-email nav-link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
+            <li class="address-list-item">
+              <a class="address-email nav-link" href="tel:+110001111111">
+                +11 (000) 111-11-11
+              </a>
             </li>
           </ul>
         </address>
+        <button class="header-button" type="button">
+          <svg class="" width="18" height="16">
+            <use href="./images/icons.svg#icon-close-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -461,7 +469,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay">
       <div class="modal">
         <button class="modal-close" type="button">
           <svg class="modal-close-icon" width="8" height="8">
@@ -542,6 +550,64 @@
           </div>
           <button class="main-button" type="submit">Send</button>
         </form>
+      </div>
+    </div>
+    <div class="modal-nav">
+      <div class="modal-nav-container">
+        <button class="modal-nav-close" type="button">
+          <svg class="modal-nav-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="modal-nav-list">
+          <li>
+            <a class="modal-nav-link corrent" href="./index.html">Studio</a>
+          </li>
+          <li><a class="modal-nav-link" href="">Portfolio</a></li>
+          <li><a class="modal-nav-link" href="">Contacts</a></li>
+        </ul>
+        <ul class="modal-address-list">
+          <li class="modal-address-list-item">
+            <a class="modal-address-email" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="modal-address-list-item">
+            <a class="modal-address-email" href="tel:+110001111111">
+              +11 (000) 111-11-11
+            </a>
+          </li>
+        </ul>
+        <ul class="section-th-ul-social">
+          <li class="icon-conatainer">
+            <a class="icon-link" href="" target="_blank">
+              <svg class="section-th-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-instagram-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-conatainer">
+            <a class="icon-link" href="" target="_blank">
+              <svg class="section-th-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-twitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-conatainer">
+            <a class="icon-link" href="" target="_blank">
+              <svg class="section-th-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-facebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-conatainer">
+            <a class="icon-link" href="" target="_blank">
+              <svg class="section-th-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>

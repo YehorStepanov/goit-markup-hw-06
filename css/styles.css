@@ -9,11 +9,22 @@ body {
   font-family: "Roboto", sans-serif;
   color: #434455;
 }
-
+/* container settings */
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  max-width: 320px;
   margin: 0 auto;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
 }
 
 li {
@@ -28,6 +39,7 @@ img {
   display: block;
 }
 
+/* header settings */
 .header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -35,8 +47,6 @@ img {
 }
 
 .header .container {
-  width: 1158px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -50,24 +60,19 @@ img {
 
 .nav-list {
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 40px;
+  display: none;
 }
 
 .nav-link {
   display: block;
   padding: 24px 0;
-}
-
-.address-list {
-  padding: 0;
-  margin-left: 332px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo {
@@ -78,7 +83,9 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
+  margin-right: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .logo-web {
@@ -101,15 +108,6 @@ img {
   color: #f4f4fd;
 }
 
-.nav-link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .nav-link.corrent {
   position: relative;
@@ -126,24 +124,202 @@ img {
   background-color: #404bbf;
 }
 
+address {
+  font-style: normal;
+}
+.header-address{
+  display: none;
+  }
+.address-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:12px;
+}
+.address-list-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address-email {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  width: 156px;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.header-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+}
+.modal-nav{
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-nav.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-nav-container {
+  background: #fff;
+  margin-left: auto;
+  position: relative;
+  width: 320px;
+  height: 100%;
+  padding-left: 16px;
+  padding-top: 72px;
+}
+.modal-nav-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(142, 143, 153, 0.3);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-nav-close:hover,
+.modal-nav-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-nav-close-icon{
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-nav-close:hover .modal-nav-close-icon,
+.modal-nav-close:focus .modal-nav-close-icon {
+  fill: #fff;
+}
+.modal-nav-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+}
+.modal-nav-link{
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-address-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin-top: 168px;
+  margin-bottom: 48px;
+}
+
+.modal-address-list-item {}
+
+.modal-address-email {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 .nav-link:hover,
 .nav-link:focus,
 .address-email:focus,
 .address-email:hover,
-.nav-link.corrent {
+.nav-link.corrent,
+.modal-nav-link:hover,
+.modal-nav-link:focus,
+.modal-nav-link.corrent {
   color: #404bbf;
 }
-
-address {
-  font-style: normal;
+.modal-address-email:hover,
+.modal-address-email:focus {
+  color: #4d5ae5;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+      margin-right: 120px;
+    }
+  .nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .header-address {
+    display: flex;
+    margin-left: 122px;
+  }
+  .address-email{
+    width: 119px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+  }
+  .header-button {
+    display: none;
+  }
 }
 
-.address-email {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: #434455;
+@media screen and (min-width: 1158px) {
+  .logo{
+    margin-right: 76px;
+  }
+  .header-address {
+    display: flex;
+    margin-left: 322px;
+  }
+  .address-email {
+    width: 151px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+  .address-list {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
 }
 
 .section-f {
@@ -315,7 +491,10 @@ address {
   align-items: center;
   justify-content: center;
 }
-
+.modal-nav-container .section-th-ul-social{
+  justify-content: flex-start;
+  gap: 40px;
+}
 .icon-conatainer {
   display: flex;
   width: 40px;
