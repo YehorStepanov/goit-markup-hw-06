@@ -474,13 +474,15 @@ address {
 }
 
 .section-t {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .section-t-hth {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
@@ -488,17 +490,17 @@ address {
 
 .section-t-ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 24px;
+  gap: 72px;
 }
 
 .section-t-li {
-  width: calc((100% - 3 * 24px) / 4);
+  width: 288px;
 }
 
 .section-t-div {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border: 1px solid #8e8f99;
@@ -513,11 +515,68 @@ address {
 }
 
 .section-t-p {
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+}
+
+@media screen and (min-width: 768px) {
+  .section-t-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+  }
+
+  .section-t-li {
+    width: calc((100% - 24px) / 2);
+  }
+  .section-t-hth {
+    text-align: start;
+  }
+  .section-t-hth {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+  }
+  .section-t-p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .section-t {
+    padding: 120px 0;
+  }
+  .section-t-div {
+    display: flex;
+  }
+  .section-t-li {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+  .section-t-hth {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .section-t-p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
 }
 
 .section-th {
