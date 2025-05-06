@@ -833,18 +833,23 @@ address {
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
 }
 
 .footer .container {
   display: flex;
-  flex-direction: row;
-  width: 1158px;
-  padding: 0 15px;
+  flex-direction: column;
+  padding: 96px 16px;
   margin: 0 auto;
-  align-items: baseline;
+  align-items: center;
 }
 
+.footer-logo-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 72px;
+}
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -855,7 +860,6 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
 }
 
 .footer-text {
@@ -868,10 +872,6 @@ address {
   color: #f4f4fd;
 }
 
-.footer-logo-div {
-  margin-right: 120px;
-}
-
 .footer-h {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -880,10 +880,7 @@ address {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
-}
-
-.footer-social {
-  margin-right: 80px;
+  text-align: center;
 }
 
 .footer-social-icon {
@@ -904,6 +901,7 @@ address {
   gap: 16px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 72px;
 }
 
 .footer-social-icon:hover,
@@ -911,15 +909,9 @@ address {
   background-color: #31d0aa;
 }
 
-.subscribe {
-}
-
-.footer-h {
-}
-
 .subscribe-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 24px;
@@ -947,8 +939,8 @@ address {
   line-height: 2;
   letter-spacing: 0.04em;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  opacity: 0.3;
   outline: none;
-  margin-right: 24px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -989,6 +981,51 @@ address {
 .subscribe-bt:focus,
 .subscribe-bt:hover {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    padding-left: 108px;
+  }
+  .footer-logo {
+    margin-right: 76px;
+  }
+  .footer-logo-div {
+    align-items: start;
+    margin-right: 24px;
+  }
+  .footer-h {
+    text-align: start;
+  }
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+  }
+  .subscribe-input {
+    margin-right: 24px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer .container {
+    flex-wrap: nowrap;
+    padding: 100px 16px;
+  }
+  .footer-logo-div {
+    margin-right: 120px;
+    margin-bottom: 0;
+  }
+  .footer-social {
+    margin-right: 80px;
+  }
+  .subscribe-input {
+    opacity: 1;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  }
 }
 
 .modal-overlay {
